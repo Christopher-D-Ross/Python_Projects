@@ -49,7 +49,7 @@ class Beast:
     def remove_items_from_dinner_menu(self, item):
         del self.dinner_menu[item]
 
-    #Customer Order
+    #Customer Order and Total Price
     def add_to_cust_order(self):
         cust_item = input("Please choose an item on the menu to add to your order by entering that item.")
         if cust_item == "chicken" or cust_item == "Chicken":
@@ -73,8 +73,8 @@ class Beast:
     def change_item_price(self, existing_item, price):
         self.dinner_menu[existing_item] = price
 
-    def get_total_price(self,item):
-            self.total_price += self.menu[item]["price"]
+    def view_amount_owed(self):
+        print("Your total amount owed is:", self.total_price)
 
 set_1 = Beast()
 
@@ -86,3 +86,4 @@ set_1.welcome_cust()
 #set_1.change_item_price("broccoli", "15")
 #print(Beast.dinner_menu)
 #set_1.add_to_cust_order()
+#set_1.view_amount_owed()
